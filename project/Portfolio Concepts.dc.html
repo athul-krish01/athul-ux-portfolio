@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&amp;family=Space+Mono&amp;family=Caveat:wght@500;600&amp;display=swap" rel="stylesheet">
+<style>
+body { margin:0; background:#FCFCFB; }
+a { color:inherit; text-decoration:none; }
+a:hover { opacity:0.7; }
+</style>
+</helmet>
+<div style="background:#FCFCFB; color:#0A0A0A; font-family:'Instrument Sans',sans-serif; min-height:100vh">
+  <div style="position:sticky; top:0; z-index:10; padding:20px 0 8px; display:flex; justify-content:center">
+    <div style="display:flex; align-items:center; gap:20px; background:rgba(255,255,255,0.72); backdrop-filter:blur(18px) saturate(1.4); -webkit-backdrop-filter:blur(18px) saturate(1.4); border:1px solid rgba(237,236,232,0.9); border-radius:999px; padding:9px 12px; box-shadow:0 12px 32px rgba(10,10,10,0.10), 0 1px 2px rgba(10,10,10,0.05)">
+      <span style="font-weight:700; font-size:16px; letter-spacing:-0.02em; padding-left:12px">AK<span style="color:#8B897F">.</span></span>
+      <span style="display:inline-flex; align-items:center; gap:7px; background:rgba(244,244,242,0.85); border:1px solid #EDECE8; border-radius:999px; padding:7px 14px; font-family:'Space Mono',monospace; font-size:12px; font-weight:700">{{ clock }}<span style="font-size:10px; color:#8B897F; font-weight:400">IST</span><sc-if value="{{ weather }}" hint-placeholder-val="{{ false }}"><span style="border-left:1px solid #DDDCD6; padding-left:9px; font-weight:400; color:#55534C">{{ weather }}</span></sc-if></span>
+      <div style="display:flex; align-items:center; gap:14px">
+        <a href="#home" style="background:#EFEFEC; border-radius:999px; padding:9px 20px; font-size:14px; font-weight:600">Home</a>
+        <a href="#work" style="border-radius:999px; padding:9px 18px; font-size:14px; color:#55534C" style-hover="background:rgba(244,244,242,0.9); color:#0A0A0A">Work</a>
+        <a href="#about" style="border-radius:999px; padding:9px 18px; font-size:14px; color:#55534C" style-hover="background:rgba(244,244,242,0.9); color:#0A0A0A">Who I am</a>
+      </div>
+      <a href="#contact" style="display:inline-flex; align-items:center; gap:8px; background:#0A0A0A; color:#FCFCFB; border-radius:999px; padding:11px 24px; font-size:14px; font-weight:600; margin-left:8px" style-hover="background:#2E2D29"><span>Resume</span><span style="font-size:14px">↗</span></a>
+    </div>
+  </div>
+  <div id="home" style="background-image:radial-gradient(rgba(10,10,10,0.06) 1px, transparent 1px); background-size:22px 22px; background-position:center top; border-bottom:1px solid #E7E6E2">
+    <div style="max-width:880px; margin:0 auto; padding:72px 40px; position:relative">
+      <span style="position:absolute; top:24px; right:40px; font-family:'Space Mono',monospace; font-size:11px; color:#B5B3AA; letter-spacing:0.1em">KOCHI, IN — 09.2026</span>
+      <div style="width:88px; height:88px; border-radius:20px; background:repeating-linear-gradient(45deg,#F2F1EC 0 8px,#EAE9E3 8px 16px); border:1px solid #E7E6E2; display:flex; align-items:center; justify-content:center; font-family:'Space Mono',monospace; font-size:8px; color:#8B897F; text-align:center; margin-bottom:20px">hand-drawn<br>portrait</div>
+      <div style="font-size:19px; font-weight:700; letter-spacing:-0.01em">Athul Krishna</div>
+      <div style="font-size:15px; color:#8B897F; margin-top:2px; margin-bottom:36px">UX Designer at Caizin · <span style="color:#55534C">open to work</span></div>
+      <h1 style="margin:0 0 20px; font-size:58px; line-height:1.06; letter-spacing:-0.03em; font-weight:600; max-width:760px; text-wrap:pretty">Designing digital experiences that make sense.</h1>
+      <p style="margin:0 0 36px; font-size:16px; line-height:1.65; color:#6F6E69; max-width:540px; text-wrap:pretty">3 years turning complex problems into simple, intuitive experiences that balance user needs, business goals, and visual clarity.</p>
+      <div style="display:flex; gap:10px">
+        <a href="#contact" style="display:inline-flex; align-items:center; gap:8px; background:#0A0A0A; color:#FCFCFB; font-size:14px; font-weight:600; padding:13px 24px; border-radius:999px">Let's chat <span style="font-size:12px">→</span></a>
+        <a href="#contact" style="border:1px solid #D9D8D3; background:#FFFFFF; color:#0A0A0A; font-size:14px; font-weight:500; padding:13px 24px; border-radius:999px">View resume</a>
+      </div>
+    </div>
+  </div>
+  <div id="work" style="max-width:880px; margin:0 auto; padding:56px 40px 80px">
+    <div style="display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:20px">
+      <span style="font-family:'Space Mono',monospace; font-size:12px; letter-spacing:0.12em; color:#6F6E69; white-space:nowrap">SELECTED WORK</span>
+      <div style="flex:1; border-top:1px dashed #DDDCD6"></div>
+    </div>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:32px 24px">
+      <div>
+        <div style="aspect-ratio:4/3; border-radius:20px; background:repeating-linear-gradient(45deg,#F2F1EC 0 12px,#EAE9E3 12px 24px); border:1px solid #EDECE8; display:flex; align-items:center; justify-content:center; font-family:'Space Mono',monospace; font-size:11px; color:#8B897F">case study cover</div>
+        <div style="margin-top:18px; font-family:'Space Mono',monospace; font-size:11px; letter-spacing:0.1em; color:#8B897F">CAIZIN · B2B SAAS · 2025</div>
+        <div style="margin-top:8px; font-size:22px; font-weight:700; letter-spacing:-0.01em">Streamlining vendor onboarding</div>
+        <div style="display:flex; justify-content:space-between; align-items:flex-end; gap:16px; margin-top:8px">
+          <p style="margin:0; font-size:14px; line-height:1.6; color:#6F6E69; max-width:300px">Cutting time-to-first-value by 60% for new vendors.</p>
+          <a href="#work" style="display:inline-flex; align-items:center; gap:10px; border:1px solid #D9D8D3; background:#FFFFFF; border-radius:999px; padding:9px 9px 9px 18px; font-size:13px; font-weight:600; white-space:nowrap; box-shadow:0 1px 2px rgba(10,10,10,0.05)" style-hover="border-color:#0A0A0A">Read story<span style="width:26px; height:26px; border-radius:50%; background:#0A0A0A; color:#FCFCFB; display:inline-flex; align-items:center; justify-content:center; font-size:12px">→</span></a>
+        </div>
+      </div>
+      <div>
+        <div style="aspect-ratio:4/3; border-radius:20px; background:repeating-linear-gradient(45deg,#F2F1EC 0 12px,#EAE9E3 12px 24px); border:1px solid #EDECE8; display:flex; align-items:center; justify-content:center; font-family:'Space Mono',monospace; font-size:11px; color:#8B897F">case study cover</div>
+        <div style="margin-top:18px; font-family:'Space Mono',monospace; font-size:11px; letter-spacing:0.1em; color:#8B897F">CAIZIN · DASHBOARD · 2025</div>
+        <div style="margin-top:8px; font-size:22px; font-weight:700; letter-spacing:-0.01em">Rethinking the analytics home</div>
+        <div style="display:flex; justify-content:space-between; align-items:flex-end; gap:16px; margin-top:8px">
+          <p style="margin:0; font-size:14px; line-height:1.6; color:#6F6E69; max-width:300px">Turning a data dump into a daily habit for 4K users.</p>
+          <a href="#work" style="display:inline-flex; align-items:center; gap:10px; border:1px solid #D9D8D3; background:#FFFFFF; border-radius:999px; padding:9px 9px 9px 18px; font-size:13px; font-weight:600; white-space:nowrap; box-shadow:0 1px 2px rgba(10,10,10,0.05)" style-hover="border-color:#0A0A0A">Read story<span style="width:26px; height:26px; border-radius:50%; background:#0A0A0A; color:#FCFCFB; display:inline-flex; align-items:center; justify-content:center; font-size:12px">→</span></a>
+        </div>
+      </div>
+      <div>
+        <div style="aspect-ratio:4/3; border-radius:20px; background:repeating-linear-gradient(45deg,#F2F1EC 0 12px,#EAE9E3 12px 24px); border:1px solid #EDECE8; display:flex; align-items:center; justify-content:center; font-family:'Space Mono',monospace; font-size:11px; color:#8B897F">case study cover</div>
+        <div style="margin-top:18px; font-family:'Space Mono',monospace; font-size:11px; letter-spacing:0.1em; color:#8B897F">CAIZIN · MOBILE · 2024</div>
+        <div style="margin-top:8px; font-size:22px; font-weight:700; letter-spacing:-0.01em">Approvals in one tap</div>
+        <div style="display:flex; justify-content:space-between; align-items:flex-end; gap:16px; margin-top:8px">
+          <p style="margin:0; font-size:14px; line-height:1.6; color:#6F6E69; max-width:300px">Three screens collapsed into one gesture.</p>
+          <a href="#work" style="display:inline-flex; align-items:center; gap:10px; border:1px solid #D9D8D3; background:#FFFFFF; border-radius:999px; padding:9px 9px 9px 18px; font-size:13px; font-weight:600; white-space:nowrap; box-shadow:0 1px 2px rgba(10,10,10,0.05)" style-hover="border-color:#0A0A0A">Read story<span style="width:26px; height:26px; border-radius:50%; background:#0A0A0A; color:#FCFCFB; display:inline-flex; align-items:center; justify-content:center; font-size:12px">→</span></a>
+        </div>
+      </div>
+      <div>
+        <div style="aspect-ratio:4/3; border-radius:20px; background:repeating-linear-gradient(45deg,#F2F1EC 0 12px,#EAE9E3 12px 24px); border:1px solid #EDECE8; display:flex; align-items:center; justify-content:center; font-family:'Space Mono',monospace; font-size:11px; color:#8B897F">case study cover</div>
+        <div style="margin-top:18px; font-family:'Space Mono',monospace; font-size:11px; letter-spacing:0.1em; color:#8B897F">CAIZIN · SYSTEMS · 2024</div>
+        <div style="margin-top:8px; font-size:22px; font-weight:700; letter-spacing:-0.01em">Design system foundations</div>
+        <div style="display:flex; justify-content:space-between; align-items:flex-end; gap:16px; margin-top:8px">
+          <p style="margin:0; font-size:14px; line-height:1.6; color:#6F6E69; max-width:300px">One language across four products.</p>
+          <a href="#work" style="display:inline-flex; align-items:center; gap:10px; border:1px solid #D9D8D3; background:#FFFFFF; border-radius:999px; padding:9px 9px 9px 18px; font-size:13px; font-weight:600; white-space:nowrap; box-shadow:0 1px 2px rgba(10,10,10,0.05)" style-hover="border-color:#0A0A0A">Read story<span style="width:26px; height:26px; border-radius:50%; background:#0A0A0A; color:#FCFCFB; display:inline-flex; align-items:center; justify-content:center; font-size:12px">→</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="about" style="border-top:1px solid #E7E6E2; border-bottom:1px solid #E7E6E2; background:#F4F4F2">
+    <div style="max-width:880px; margin:0 auto; padding:64px 40px; display:grid; grid-template-columns:minmax(240px, 320px) minmax(0,1fr); gap:48px; align-items:start">
+      <div style="background:#FFFFFF; border:1px solid #EDECE8; border-radius:12px; padding:18px; box-shadow:0 1px 2px rgba(10,10,10,0.04)">
+        <div style="aspect-ratio:4/5; border-radius:8px; background:repeating-linear-gradient(45deg,#F2F1EC 0 12px,#EAE9E3 12px 24px); display:flex; align-items:center; justify-content:center; font-family:'Space Mono',monospace; font-size:11px; color:#8B897F; text-align:center">hand-drawn<br>illustration of me</div>
+      </div>
+      <div>
+        <div style="display:flex; align-items:center; gap:16px; margin-bottom:16px"><span style="font-family:'Space Mono',monospace; font-size:12px; letter-spacing:0.12em; color:#6F6E69">WHO I AM</span><div style="flex:1; border-top:1px dashed #DDDCD6"></div><span style="font-family:'Space Mono',monospace; font-size:12px; color:#B5B3AA">+</span></div>
+        <p style="margin:0 0 28px; font-size:17px; line-height:1.65; color:#2E2D29; max-width:520px; text-wrap:pretty">UX designer with 3 years of experience, currently at Caizin. I care about the unglamorous parts of design — naming things well, cutting steps, and making interfaces feel obvious in hindsight.</p>
+        <div style="display:flex; align-items:baseline; gap:12px; padding:12px 0; border-top:1px solid #E7E6E2"><span style="font-size:14px; font-weight:600">Caizin — UX Designer</span><div style="flex:1"></div><span style="font-size:13px; color:#6F6E69">2024–now</span></div>
+        <div style="display:flex; align-items:baseline; gap:12px; padding:12px 0; border-top:1px solid #E7E6E2; border-bottom:1px solid #E7E6E2"><span style="font-size:14px; font-weight:600">Freelance — Product Design</span><div style="flex:1"></div><span style="font-size:13px; color:#6F6E69">2023–24</span></div>
+      </div>
+    </div>
+  </div>
+  <div id="contact" style="background-image:linear-gradient(90deg, rgba(10,10,10,0.03) 1px, transparent 1px); background-size:110px 100%">
+    <div style="max-width:880px; margin:0 auto; padding:88px 40px 32px; text-align:left">
+      <div style="font-size:56px; font-weight:600; letter-spacing:-0.03em; line-height:1.08; margin-bottom:18px; max-width:640px; text-wrap:pretty">Let's make something that makes sense.</div>
+      <a href="#contact" style="display:inline-flex; align-items:center; gap:8px; background:#0A0A0A; color:#FCFCFB; font-size:14px; font-weight:600; padding:13px 24px; border-radius:999px; margin-bottom:64px" style-hover="background:#2E2D29">Get in touch <span style="font-size:12px">→</span></a>
+      <div style="display:flex; justify-content:space-between; align-items:center; border-top:1px solid #E7E6E2; padding-top:22px; padding-bottom:8px; gap:16px; flex-wrap:wrap">
+        <span style="font-family:'Caveat',cursive; font-size:38px">Athul Krishna</span>
+        <div style="display:flex; gap:24px; font-size:13px; color:#6F6E69"><a href="#contact">LinkedIn</a><a href="#contact">Email</a><a href="#contact">Resume</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { clock: "", weather: "" };
+  componentDidMount() {
+    const tick = () => {
+      const t = new Date().toLocaleTimeString("en-IN", { hour: "2-digit", minute: "2-digit", hour12: false, timeZone: "Asia/Kolkata" });
+      this.setState({ clock: t });
+    };
+    tick();
+    this._t = setInterval(tick, 30000);
+    // Kochi, IN current temperature
+    fetch("https://api.open-meteo.com/v1/forecast?latitude=9.93&longitude=76.26&current=temperature_2m")
+      .then(r => r.json())
+      .then(d => {
+        const temp = d && d.current && Math.round(d.current.temperature_2m);
+        if (typeof temp === "number" && !isNaN(temp)) this.setState({ weather: temp + "\u00B0C" });
+      })
+      .catch(() => {});
+  }
+  componentWillUnmount() { clearInterval(this._t); }
+  renderVals() { return { clock: this.state.clock, weather: this.state.weather }; }
+}
+</script>
+</body>
+</html>
